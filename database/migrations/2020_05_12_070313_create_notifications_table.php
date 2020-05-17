@@ -20,6 +20,7 @@ class CreateNotificationsTable extends Migration
             $table->enum('status',['seen','unseen']);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 
